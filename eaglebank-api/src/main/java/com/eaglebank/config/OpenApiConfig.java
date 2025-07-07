@@ -19,7 +19,7 @@ public class OpenApiConfig {
         final String securitySchemeName = "bearerAuth";
 
         return new OpenAPI()
-                .info(new Info().title("My API").version("v1"))
+                .info(new Info().title("Eagle Bank API").version("v1"))
                 .addSecurityItem(new SecurityRequirement().addList(securitySchemeName))
                 .components(new Components()
                                     .addSecuritySchemes(securitySchemeName,
