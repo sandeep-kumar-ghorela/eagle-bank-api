@@ -1,0 +1,5 @@
+FROM amazoncorretto:17-alpine
+#following location is optional, for complex projects it might be required
+VOLUME /tmp
+COPY target/error_exception_handling-0.0.1-SNAPSHOT.jar my-microservice.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/my-microservice.jar"]
